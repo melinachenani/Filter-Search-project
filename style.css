@@ -26,16 +26,16 @@ body{
 }
 /*sidebar*/
 .side-bar{
-    top: 0;
     width: 300px;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: fixed;
 }
 .side-bar h3{
     width: 300px;
-    padding: 1rem  0 0 1rem;
+    padding-left: 1rem ;
     color: var(--mainGrey);
 }
 .search{
@@ -61,7 +61,7 @@ body{
     cursor: pointer;   
 }
 .btn-primary{
-    width: 4rem;
+    width: 4.5rem;
     height: 1.5rem;
     border: none;
     border-radius: 10rem;
@@ -71,17 +71,16 @@ body{
 }
 .product-img{
     width: 250px;
-    height: 400px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 6px;
-    padding: 3px;
+    padding: 1px;
 }
-.one{
+.image-border{
     border-bottom: 2px solid var(--bodyColor);
-
 }
 .image{
     display: flex;
@@ -90,7 +89,7 @@ body{
 .single-product{
     background: var(--mainWhite);
     width: 270px;
-    height: 460px;
+    height: 410px;
     border-radius: 20px;
     box-shadow: -20px 20px 20px rgba(0, 0, 0, 0.1);
 }
@@ -103,6 +102,7 @@ body{
 }
 .product-desc span{
     color: var(--mainGreen);
+    padding: 1px;
     border: 2px solid var(--mainGreen);
     cursor: pointer;
 }
@@ -114,11 +114,10 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 4rem;
 }
-.two{
+.main-section{
     margin: 5rem 0 1rem;
     display: grid;
     grid-template-columns: 300px 1fr;
-
 }
 header{
     background-color: var(--mainpeach);
@@ -126,9 +125,7 @@ header{
     width: 100%;
     height: 60px;
     top: 0;
-    z-index: 1;
 }
-
 .fa-user{
     color: var(--primaryColor);
     cursor: pointer;
@@ -137,14 +134,35 @@ header{
     color: var(--primaryColor);
     cursor: pointer;
 }
-.fa-bars{
-    color: var(--primaryColor);
+/* Toggler */
+.nav__toggler{
     cursor: pointer;
 }
-.header{
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color: var(--primaryColor);
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.4s ease-out;
+}
+.nav.nav__expanded .bar-one{
+    transform: rotate(-45deg) translate(-8px, 7px);
+    margin: 8px 0;
+}
+.nav.nav__expanded .bar-two{
+    opacity: 0;
+    transform: translate(-20px);
+}
+.nav.nav__expanded .bar-three  {
+    transform: rotate(45deg) translate(-8px, -8px) ;
+    margin: 8px 0;
+}
+.nav{
     display: flex;
     align-items: center;
 }
+
 
 
 
