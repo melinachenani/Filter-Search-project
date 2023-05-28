@@ -38,7 +38,7 @@ body{
     padding-left: 1rem ;
     color: var(--mainGrey);
 }
-.search{
+#search{
     border: var(--mainGrey) 1px solid;
     width: 15rem;
     height: 2.2rem;
@@ -61,13 +61,21 @@ body{
     cursor: pointer;   
 }
 .btn-primary{
-    width: 4.5rem;
-    height: 1.5rem;
-    border: none;
-    border-radius: 10rem;
-    margin: 0.75rem;
-    background-color: var(--mainpeach) ;
+    width: 4.9rem;
+    height: 1.6rem;
+    font-weight: bold;
+    border: 2px solid var(--primaryColor);
+    color: var(--primaryColor);
+    border-radius: 0 10rem 10rem 10rem;
+    margin: 0.7rem;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: 1px;
+}
+.btn-primary:hover{
+    background-color: var(--primaryColor) ;
+    color: var(--mainWhite);
 }
 .product-img{
     width: 250px;
@@ -79,10 +87,10 @@ body{
     margin-bottom: 6px;
     padding: 1px;
 }
-.image-border{
+.image{
     border-bottom: 2px solid var(--bodyColor);
 }
-.image{
+.image-container{
     display: flex;
     justify-content: center;
 }
@@ -313,7 +321,7 @@ header{
 .main-footer{
     background-color: var(--primaryColor);
     width: 100%;
-    height: 18rem;
+    height: 15.5rem;
     display: flex;
     justify-content: center;
 }
