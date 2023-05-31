@@ -174,135 +174,64 @@ header{
 /*login form*/
 .login-box{
     position: fixed;
-    top: 50%;
+    top: 20rem;
     left: 50%;
-    width: 400px;
-    padding: 40px;
+    width: 350px;
+    height: 370px;
+    padding: 35px;
     transform: translate(-50%, -50%);
-    background: rgb(255,192,203, 0.8);
+    background: var(--mainWhite);
     border-radius: 10px; 
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);  
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.9);  
     z-index: 2;
     opacity: 0;
 }
-.login-box h2{
-    margin: 0 0 30px;
-    padding: 0;
-    color: var(--mainWhite);
-    text-align: center;
+.userimg{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: 19rem;
 }
-.login-box .user-box input{
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.required::after{
+    content: "*";
+    color: var(--mainRed);
+    font-size: 20px;
+}
+.user-box input{
     width: 100%;
-    padding: 10px 0;
-    color: var(--mainWhite);
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid var(--mainWhite);
+    padding: 8px 5px;
+    color: var(--mainBlack);
+    border: 1px solid var(--mainGrey);
     outline: none;
-    background: transparent;
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
-.user-box input::placeholder{
-    color: #03e9f4;
-}
-.user-box .fa-eye-slash{
+.btn-secondary{
+    width: 7rem;
+    height: 2rem;
+    background-color: var(--primaryColor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
 }
-.login-box form a{
-    position: relative;
-    display: inline-block;
-    padding: 10px 10px;
-    color: #03e9f4;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.5;
-    margin-top: 40px;
-    letter-spacing: 4px; 
+.box a{
+    font-size: 14px;
+    margin-top: 5px;
 }
-.login-box a:hover{
-    background-color: #03e9f4;
-    color: var(--mainWhite);
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4, 
-                0 0 25px #03e9f4, 
-                0 0 50px #03e9f4, 
-                0 0 100px #03e9f4;
+.create-account{
+    margin-top: 1rem;
+    font-size: 14px;
 }
-.login-box a span{
-    position: absolute;
-    display: block;
-}
-.login-box a span:nth-child(1){
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, 
-    #03e9f4);
-    animation: btn-anim1 1s linear infinite;
-}
-@keyframes btn-anim1 {
-    0% {
-        left: -100%;
-    }
-    50%,100% {
-        left: 100%;
-    }   
-}
-.login-box a span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, 
-    #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes btn-anim2 {
-    0% {
-        top: -100%;
-    }
-    50%,100% {
-        top: 100%;
-    }   
-}
-.login-box a span:nth-child(3){
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, 
-    #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: 0.5s;
-}
-@keyframes btn-anim3 {
-    0% {
-        right: -100%;
-    }
-    50%,100% {
-        right: 100%;
-    }   
-}
-.login-box a span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, 
-    #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: 0.7;
-}
-@keyframes btn-anim4 {
-    0% {
-        bottom: -100%;
-    }
-    50%,100% {
-        bottom: 100%;
-    }   
-}
+
 .backdrop{
     position: fixed;
     top: 0;
@@ -326,7 +255,7 @@ header{
     justify-content: center;
 }
 .footer__item{
-    padding: 3rem;
+    padding: 2rem;
 }
 .footer__item a{
     text-decoration: none;
@@ -335,7 +264,7 @@ header{
     color:  var(--secondaryColor);
 }
 .footer__icons{
-    color: var(--mainpeach);
+    color: rgb(211, 211, 211);
 }
 .fa{
     margin: 1rem;
@@ -346,4 +275,30 @@ header{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.footer__item a:not(:last-of-type):after{
+    content: "|";
+    color: var(--mainBlack);
+    margin: 3px;
+    font-size: 20px;
+}
+.fa-instagram:hover{
+    color: #E4405F;
+    cursor: pointer;
+}
+.fa-facebook-square:hover{
+    color: #1a3775;
+    cursor: pointer;
+}
+.fa-map-marker:hover{
+    color: var(--mainRed);    
+    cursor: pointer;
+}
+.fa-phone:hover{
+    color: var(--mainBlack);
+    cursor: pointer;
+}
+.fa-whatsapp:hover{
+    color:  #16be54;
+    cursor: pointer;
 }
