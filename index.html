@@ -62,14 +62,21 @@
     </section>
     <header>
         <nav class="nav">
-            <div class="nav__toggler">
-                <div class="bar bar-one"></div>
-                <div class="bar bar-two"></div>
-                <div class="bar bar-three"></div>
+            <div class="nav-icons">
+                <div class="nav__toggler">
+                    <div class="bar bar-one"></div>
+                    <div class="bar bar-two"></div>
+                    <div class="bar bar-three"></div>
+                </div>
+                <img src="/assets/pics/login.png" alt="" class="user">
+                <div>
+                    <img src="/assets/pics/cart.png" alt="" class="cart">
+                    <span class="cart-items">0</span>
+                </div>
             </div>
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
-            <h3>Filter-Search Project</h3>
+            <div>
+                <h3>Filter-Search Project</h3>
+            </div>
         </nav>
     </header>
     <section class="main-section">
@@ -83,11 +90,11 @@
                         </div>
                         <input id="search" type="search" placeholder="Search...">
                     </div>
-                    <a href="#" class="btn btn-primary">All</a>
-                    <a href="#" class="btn btn-primary">Boots</a>
-                    <a href="#" class="btn btn-primary">Sandals</a>
-                    <a href="#" class="btn btn-primary">Sneakers</a>
-                    <a href="#" class="btn btn-primary">Mid-heels</a>
+                    <a href="#" class="btn btn-primary" data-filter="" >All</a>
+                    <a href="#" class="btn btn-primary" data-filter="boots" >Boots</a>
+                    <a href="#" class="btn btn-primary" data-filter="sandals" >Sandals</a>
+                    <a href="#" class="btn btn-primary" data-filter="sneakers" >Sneakers</a>
+                    <a href="#" class="btn btn-primary" data-filter="mid-heels" >Mid-heels</a>
                 </div>
             </div>
         </section>
