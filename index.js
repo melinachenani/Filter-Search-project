@@ -1,7 +1,7 @@
 //selectors
 const loginBox = document.querySelector(".login-box");
 const backDrop = document.querySelector(".backdrop");
-const showLoginBox = document.querySelector(".fa-user");
+const showLoginBox = document.querySelector(".user");
 const closeLoginBox = document.querySelector(".submit");
 const toggler = document.querySelector(".nav__toggler");
 const navbar = document.querySelector(".nav");
