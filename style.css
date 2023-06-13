@@ -127,19 +127,17 @@ body{
     min-height: 28rem;
 }
 header{
-    background-color: var(--mainpeach);
+    background: rgb(255, 255, 255, 0.9);
     position: fixed;
     width: 100%;
     height: 60px;
     top: 0;
 }
-.fa-user{
-    color: var(--primaryColor);
+.user{
+    width: 36px;
+    height: 36px;
     cursor: pointer;
-}
-.fa-shopping-cart{
-    color: var(--primaryColor);
-    cursor: pointer;
+    margin-left: 8px;
 }
 /* Toggler */
 .nav__toggler{
@@ -186,6 +184,12 @@ header{
     position: absolute;
     left: 130px;
     bottom: 36px;
+}
+.cart{
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    margin-left: 2px;
 }
 /*login form*/
 .login-box{
@@ -259,7 +263,98 @@ header{
     backdrop-filter: blur(1px);
     display: none;
 }
-
+/*add to cart modal*/
+.cart-center{
+    top: 25rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    z-index: 5;
+    opacity: 0
+}
+.cart-modal{
+    background-color: var(--mainWhite);
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    padding: 1.5rem 0 1rem;
+}
+.cart-modal-img{
+    width: 100px;
+    height: 130px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.cart-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--bodyColor);
+    margin: 1rem;
+    font-family: serif;
+}
+.cart-desc{
+    margin-left: 1rem;
+}
+.fa-plus-circle{
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+.fa-minus-circle{
+    color: var(--secondaryColor);
+    cursor: pointer;
+}
+.fa-trash-o{
+    color: var(--mainRed);
+    cursor: pointer;
+}
+.cart-footer{
+    margin-top: 1.5rem;
+}
+.cart-footer-desc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+}
+.check-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check-box a{
+    color: var(--secondaryColor);
+    font-family: serif;
+    font-size: 18px;
+    font-style: italic;
+}
+.btn-tertiary{
+    background-color: rgb(211, 211, 211);;
+    border: none;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.cartimg{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-bottom: 15rem;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    display: none;
+    z-index: 2;
+}
 
 /*footer*/
 .main-footer{
