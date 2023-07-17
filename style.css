@@ -35,7 +35,7 @@ body{
 }
 .side-bar h3{
     width: 300px;
-    padding-left: 1rem ;
+    padding-left: 1rem;
     color: var(--mainGrey);
 }
 #search{
@@ -72,7 +72,7 @@ body{
     padding: 1px;
 }
 .btn-primary:hover{
-    background-color: var(--mainBlack);
+    background-color: var(--mainBlack) ;
     color: var(--mainWhite);
 }
 .product-img{
@@ -185,12 +185,6 @@ header{
     left: 130px;
     bottom: 36px;
 }
-.cart{
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    margin-left: 2px;
-}
 /*login form*/
 .login-box{
     position: fixed;
@@ -263,6 +257,13 @@ header{
     backdrop-filter: blur(1px);
     display: none;
 }
+.cart{
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
 /*add to cart modal*/
 .cart-center{
     top: 25rem;
